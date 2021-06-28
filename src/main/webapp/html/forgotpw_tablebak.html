@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>HTML | MMS</title>
+<link rel="stylesheet" href="../css/index.css"/>
+</head>
+<body>
+<header class="prime-Top"></header>
+<div class="semi-Top">
+	<a href="../index.html">메인</a>
+</div>
+<div class="main">
+<h1>비밀번호를 찾습니다.</h1>
+<form action="" method="POST">
+<table>
+	<tbody>
+		<tr>
+			<td class="tdLabel"><label for="account">ID</label></td>
+			<td><input type="text" size="20" length="10" id="account" name="account" placeholder="사용자의 ID를 입력하세요."/></td>
+		</tr>
+		<tr>
+			<td class="tdLabel"><label for="email">이메일</label></td>
+			<td><input type="text" size="20" length="20" id="email" name="email" placeholder="사용자의 이메일을 입력하세요."/></td>
+		</tr>
+		<tr>
+			<td class="tableCellBtm" colspan="2">
+				<input type="submit" value="찾기"/>
+				<input type="button" onclick="ToMain()" value="메인화면으로"/>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</form>
+</div>
+</body>
+<script type="text/javascript" src="../js/script.js"></script>
+</html>

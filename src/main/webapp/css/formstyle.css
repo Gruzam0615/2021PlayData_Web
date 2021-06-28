@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+/*
+//input요소의 type="text"에서 focus를 가질때
+input[type="text"]:focus {
+	background-color: rgba(10, 10, 10, 1);
+	color: rgba(250, 250, 250, 1);
+}
+*/
+.divtable-body {
+	width: 100%;
+}
+
+.divtable-row {
+	width: 100%;
+}
+.divtable-cell {
+	display: inline-flex;
+}
+.divSubmitRight {
+	text-align: end;
+}
+.cel10 {
+	width: 10%;
+}
+cel90 {
+	width: 90%;
+}
+cel100 {
+	width: 100%;
+}
+
+.normal-Btn {
+	background-color: rgba(250, 250, 250, 1);
+	color: rgba(10, 10, 10, 1);
+	border-radius: 5px;
+	border: 0.75px solid rgba(10, 10, 10, 1);	
+}
+.normal-Btn:hover {
+	background-color: rgba(10, 10, 10, 1);
+	color: rgba(250, 250, 250, 1);	
+}
+
+.submit {
+	background-color: rgba(10, 180, 90, 1);
+	color: rgba(250, 250, 250, 1);
+	border-radius: 5px;
+	border: 0px;
+	margin: 0 3% 0 3%;	
+}
+
+.submit:hover {
+	background-color: rgba(250, 250, 250, 1);
+	color: rgba(10, 180, 90, 1);
+	border: 0.75px solid rgba(10, 180, 90, 1);	
+}

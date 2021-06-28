@@ -4,24 +4,41 @@
 <meta charset="UTF-8">
 <title>HTML | MMS</title>
 <link rel="stylesheet" href="../css/index.css"/>
+<link rel="stylesheet" href="../css/formstyle.css"/>
 </head>
 <body>
-<div class="prime-Top"></div>
+<header class="prime-Top"></header>
 <div class="semi-Top">
 	<a href="../index.html">메인</a>
 </div>
 <div class="main">
 <h1>아이디를 찾습니다.</h1>
 <form action="" method="POST">
-	<label for="name">이름</label>
-	<input type="text" size="20" length="10" id="name" name="name" placeholder="사용자의 이름을 입력하세요."/>
-	<br/><br/>
-	<label for="email">이메일</label>
-	<input type="text" size="20" length="20" id="email" name="passowrd" placeholder="사용자의 이메일을 입력하세요."/>
-	<br/><br>
-	<input type="submit" value="찾기"/>
-	<input type="button" onclick="toMain()" value="메인화면으로"/>
-	<br/><br>
+<div class="divtable-body">
+	<div class="divtable-row">
+		<div class="cel10 divtable-cell">
+			<label for="name">이름</label>
+		</div>
+		<div class="cdl90 divtable-cell">
+			<input type="text" size="20" id="name" name="name" placeholder="사용자의 이름을 입력하세요."/>
+		</div>
+	</div>
+	<div class="divtable-row">
+		<div class="cel10 divtable-cell">
+			<label for="email">이메일</label>
+		</div>
+		<div class="cel90 divtable-cell">
+			<input type="text" size="20" id="email" name="passowrd" placeholder="사용자의 이메일을 입력하세요."/>
+		</div>		
+	</div>
+	<div class="divSubmitRight divtable-row">
+		<div class="cel100 divtable-cell">
+			<input class="submit" type="submit" value="찾기"/>
+			<input class="normal-Btn" type="button" onclick="ToMain()" value="메인화면으로"/>
+		</div>		
+	</div>
+</div>
+
 </form>
 </div>
 </body>

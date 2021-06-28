@@ -4,65 +4,100 @@
 <meta charset="UTF-8">
 <title>HTML | MMS</title>
 <link rel="stylesheet" href="../css/index.css"/>
+<link rel="stylesheet" href="../css/formstyle.css"/>
 </head>
 <body>
-<div class="prime-Top"></div>
+<header class="prime-Top"></header>
 <div class="semi-Top">
 	<a href="../index.html">메인</a>
 </div>
 <div class="main">
 <h1>회원가입</h1>
 <form action="" method="POST">
-	<label for="account">ID</label>
-	<input type="text" size="20" length="20" id="account" name="account" placeholder="아이디를 입력하세요."/>
-	<br/><br/>
-	<label for="password">PW</label>
-	<input type="password" size="20" length="20" id="passowrd" name="passowrd" placeholder="비밀번호를 입력하세요."/>
-	<br/><br>
-	<label for="check_password">Check PW</label>
-	<input type="password" size="20" length="20" id="check_password" name="check_passowrd" placeholder="비밀번호를 다시한 입력하세요."/>
-	<br/><br>
-	<label for="name">이름</label>
-	<input type="text" size="20" length="20" id="name" name="name" placeholder="이름을 입력하세요."/>
-	<br/><br/>
-	<label for="mobile">핸드폰</label>
-	<input type="text" size="20" length="20" id="mobile" name="mobile" placeholder="핸드폰 번호를 입력하세요."/>
-	<br/><br/>
-	<label for="email">이메일</label>
-	<input type="text" size="20" length="20 id="email" name="email" placeholder="이메일 주소를 입력하세요."/>
-	<br/><br/>
-	<label for="address">주소</label>
-	<select id="address" name="address">
-		<option value="none">해당없음</option>
-		<option value="seoul">서울</option>
-		<option value="busan">부산</option>
-		<option value="daegu">대구</option>
-		<option value="incheon">인천</option>
-		<option value="gwangju">광주</option>
-		<option value="daejeon">대전</option>
-		<option value="ulsan">울산</option>
-		<option value="sejong">세종</option>
-		<option value="gyeonggi">경기</option>
-		<option value="gangwon">강원</option>
-		<option value="chungbuk">충북</option>
-		<option value="chungnam">충남</option>
-		<option value="jeonbuk">전북</option>
-		<option value="jeonnam">전남</option>
-		<option value="gyeongbuk">경북</option>
-		<option value="gyeongnam">경남</option>
-		<option value="jeju">제주</option>
-	</select>
-	<input type="text" size="40" length="40" id="address2" name="address2" placeholder="상세주소를 입력하세요. 시, 구"/>
-	<input type="text" size="40" length="40" id="address3" name="address3" placeholder="상세주소를 입력하세요. 구 이하 주소"/>
-	<br/><br/>
-	<label for="rank">회원선택</label>
-	<select id="rank" name="rank">
-		<option value="g">일반 회원</option>
-		<option value="p">판매자 회원</option>
-	</select>
-	<br/><br>
-	<input type="submit" value="회원가입"/>
-	<input type="button" class="signUp-toback-btn" onclick="toTheBack()" value="뒤로가기"/>	
+<table>
+	<tbody>
+		<tr>
+			<td class="tdLabel"><label for="account">ID</label></td>
+			<td><input type="text" size="20" length="20" id="account" name="account" placeholder="아이디를 입력하세요." value=""/></td>
+		</tr>
+		<tr>
+			<td class="tdLabel"><label for="password">PW</label></td>
+			<td><input type="password" size="20" length="20" id="passowrd" class="password" name="passowrd" placeholder="비밀번호를 입력하세요." value=""/></td>
+		</tr>
+		<tr>
+			<td class="tdLabel"><label for="check_password">Check PW</label></td>
+			<td>
+				<input type="password" size="20" length="20" id="check_password" class="password" name="check_passowrd" placeholder="비밀번호를 다시한번 입력하세요. "value=""/>
+				<input id="show_password" class="" type="checkbox" value="false"  onchange="ShowPassword()"/>
+				<label for="show_password">비밀번호 보이기</label>
+			</td>
+		</tr>
+		<tr>
+			<td class="tdLabel"><label for="name">이름</label></td>
+			<td><input type="text" size="20" length="20" id="name" name="name" placeholder="이름을 입력하세요." value=""/></td>
+		</tr>
+		<tr>
+			<td class="tdLabel"><label for="mobile">핸드폰</label></td>
+			<td><input type="text" size="20" length="20" id="mobile" name="mobile" placeholder="핸드폰 번호를 입력하세요." value=""/></td>
+		</tr>
+		<tr>
+			<td class="tdLabel"><label for="email">이메일</label></td>
+			<td>
+				<input type="text" size="20" length="20" id="email" name="email" placeholder="이메일 주소를 입력하세요." value=""/>
+				<span> @ </span>
+				<input type="text" size="20" length="20" id="email2" name="email2" placeholder="이메일 주소를 입력하세요." value=""/>
+				<select id="email2-option" name="email2-option" onchange="EmailHost(event)">
+					<option value="" selected>직접입력</option>
+					<option value="naver.com">네이버</option>
+					<option value="google.com">구글</option>
+					<option value="hanmail.net">한메일</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td class="tdLabel"><label for="address">주소</label></td>
+			<td>
+				<select id="address" name="address">
+					<option value="none" selected>해당없음</option>
+					<option value="seoul">서울</option>
+					<option value="busan">부산</option>
+					<option value="daegu">대구</option>
+					<option value="incheon">인천</option>
+					<option value="gwangju">광주</option>
+					<option value="daejeon">대전</option>
+					<option value="ulsan">울산</option>
+					<option value="sejong">세종</option>
+					<option value="gyeonggi">경기</option>
+					<option value="gangwon">강원</option>
+					<option value="chungbuk">충북</option>
+					<option value="chungnam">충남</option>
+					<option value="jeonbuk">전북</option>
+					<option value="jeonnam">전남</option>
+					<option value="gyeongbuk">경북</option>
+					<option value="gyeongnam">경남</option>
+					<option value="jeju">제주</option>
+				</select>
+				<input type="text" size="40" id="address2" name="address2" placeholder="상세주소를 입력하세요. 시, 구" value="" />
+				<input type="text" size="40" id="address3" name="address3" placeholder="상세주소를 입력하세요. 구 이하 주소" value="" />
+			</td>
+		</tr>
+		<tr>
+			<td class="tdLabel"><label for="rank">회원선택</label></td>
+			<td>
+				<select id="rank" name="rank">
+					<option value="g">일반 회원</option>
+					<option value="p">판매자 회원</option>
+				</select>
+			</td>	
+		</tr>
+		<tr>
+			<td class="tableCellBtm" colspan="2">
+				<input class="submit" type="submit" value="회원가입"/>
+				<input class="normal-Btn" type="button" class="signUp-toback-btn" onclick="ToMain()" value="뒤로가기"/>
+			</td>
+		</tr>
+	</tbody>
+</table>
 </form>
 </div>
 </body>

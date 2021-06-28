@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>HTML | MMS</title>
+<link rel="stylesheet" href="../css/index.css"/>
+<link rel="stylesheet" href="../css/formstyle.css"/>
+</head>
+<body>
+<header class="prime-Top"></header>
+<div class="semi-Top">
+	<a href="../index.html">메인</a>
+</div>
+<div class="main">
+<h1>로그인</h1>
+<form action="" method="POST">
+<table>
+	<tbody>
+		<tr>
+			<td class="tdLabel"><label for="account">ID</label></td>
+			<td><input type="text" size="20" length="10" id="account" name="account" placeholder="사용자의 ID를 입력하세요."/></td>
+		</tr>
+		<tr>
+			<td class="tdLabel"><label for="password">PW</label></td>
+			<td><input type="password" size="20" length="20" id="password" name="passowrd" placeholder="사용자의 비밀번호를 입력하세요."/></td>
+		</tr>
+		<tr>
+			<td class="tableCellBtm" colspan="2">
+				<input class="submit" type="submit" value="로그인"/>
+				<input class="normal-Btn" type="button" onclick="ToMain()" value="메인화면으로"/>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p> 아이디가 생각나지 않는다면 <a class="signIn_a_tag" href="./forgotid.html">여기로</a> 비밀번호가 생각나지 않는다면 <a class="signIn_a_tag" href="./forgotpw.html">여기로</a> </p>
+</div>
+</body>
+<script type="text/javascript" src="../js/script.js"></script>
+</html>
