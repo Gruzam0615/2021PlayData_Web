@@ -1,0 +1,49 @@
+<!--  20210629 DEMO01 -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../css/index.css" />
+<link rel="stylesheet" href="../css/drawinglist.css" />
+<title>Draw!!</title>
+</head>
+<body>
+<header class="prime-Top">
+	<nav class="topNav">
+		<a href="../index.html">Main</a>
+		<a href="">Images</a>
+	</nav>
+</header>
+<div class="semi-Top">
+	<a href="../html/signin.html">로그인</a>
+    <a href="./html./signup.html">회원가입</a>
+</div>
+<main class="main">
+<form>
+<fieldset>
+	<legend> 참가자 이름을 입력하세요.</legend>
+	<input type="text" id="insertName" value=""/>
+	<input type="button" id="btn_add" value="등록" onclick="addPeople()"/>
+</fieldset>
+<fieldset>
+	<legend>참가자 명단</legend>
+	<div id="peopleListDiv" class="">
+		<ul id="peopleList">
+			<li><label for="" id="" class="labelList"></label></li>
+		</ul>
+	</div>
+	<label for="allCheck">모두 체크</label>
+	<input type="checkbox" name="allCheck" id="allCheck" class="checkbox" />
+</fieldset>	
+<fieldset>
+	<legend>선택된 인원 명단</legend>
+	<div id="selectedListDiv">
+		<ul id="selectedList">			
+		</ul>
+	</div>
+</fieldset>
+</form>
+</main>
+</body>
+<script type="text/javascript" src="../js/drawinglist.js"></script>
+</html>

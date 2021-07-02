@@ -1,0 +1,13 @@
+@Charset "UTF-8";
+
+#section1 {
+	width: 100%;
+	height: 100px;
+	background-color: rgba(10,10,10,1);
+	text-align: center;
+}
+
+#section1 > p {
+	color: rgba(250, 250, 250, 1);
+	font-size: 50pt;	
+}

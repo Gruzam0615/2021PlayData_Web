@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2021-07-01 demo01</title>
+</head>
+<body>
+<main>
+<form action="#" method="POST">
+<div>
+	<label for="account">ID</label>
+	<input type="text" id="account" value="" placeholder="아이디를 입력해주세요"/>
+	<input type="button" id="accountDupli" value="아이디 중복검사"/>
+	<label for="account" id="account_Spec"></label>
+</div>
+<div>
+	<label for="password">PW</label>
+	<input type="password" size="20" id="password" class="password" name="passowrd" placeholder="비밀번호를 입력하세요." value=""/>
+	<label for="password" id="password_Spec"></label>
+</div>
+<div>
+	<label for="passwordChk">PW Check</label>
+	<input type="password" size="20" id="check_password" class="password" name="check_passowrd" placeholder="비밀번호를 다시한번 입력하세요. "value=""/>
+	<input id="show_password" class="" type="checkbox" value="false"  onchange="ShowPassword()"/>
+	<label for="show_password">비밀번호 보이기</label>
+</div>
+<div>
+	<label for="email">email</label>
+	<input type="text" size="20" id="email" name="email" placeholder="이메일 주소를 입력하세요." value="" readonly="readonly"/>
+	<span> @ </span>
+	<input type="text" size="20"  id="email2" name="email2" readonly="readonly" value="도메인을 선택해주세요."/>
+		<select id="email2-option" name="email2-option" onchange="EmailHost(event)">
+			<option value="도메인을 선택해주세요." selected>==선택==</option>	
+			<option value="naver.com">네이버</option>
+			<option value="google.com">구글</option>
+			<option value="hanmail.net">한메일</option>
+			<option value="">직접입력</option>
+		</select>
+</div>
+<div>
+	<br/>
+	<span>관심사 5개의 항목중 1개를 선택하시오.</span>
+	<br/>
+	<label for="javascript">javascript</label>	
+	<input type="checkbox" class="interestCheck" id="javascript" name="interest" value="javascript"/>
+	<br/>
+	<label for="javat">java</label>	
+	<input type="checkbox" class="interestCheck" id="java" name="interest" value="java"/>
+	<br/>
+	<label for="python">Python</label>	
+	<input type="checkbox" class="interestCheck" id="python" name="interest" value="python"/>
+	<br/>
+	<label for="csharp">c#</label>	
+	<input type="checkbox" class="interestCheck" id="csharp" name="interest" value="csharp"/>
+	<br/>
+	<label for="cpp">c++</label>	
+	<input type="checkbox" class="interestCheck" id="cpp" name="interest" value="cpp"/>
+	<br/>
+	<input type="button" id="AllCheck" value="전부선택" />
+	<!-- radio type
+	<label for="javascript">javascript</label>	
+	<input type="radio" id="javascript" name="interest" value="javascript"/>
+	<br/>
+	<label for="javat">java</label>	
+	<input type="radio" id="java" name="interest" value="java"/>
+	<br/>
+	<label for="python">Python</label>	
+	<input type="radio" id="python" name="interest" value="python"/>
+	<br/>
+	<label for="csharp">c#</label>	
+	<input type="radio" id="csharp" name="interest" value="csharp"/>
+	<br/>
+	<label for="cpp">c++</label>	
+	<input type="radio" id="cpp" name="interest" value="cpp"/>
+	-->
+</div>
+<div>
+	<p>아무말</p>
+	<textarea id="free" name="free" rows="10" cols="100"></textarea>
+</div>
+<div>
+	<input type="reset" id="cancle" value="취소" onclick="ToMain()" />
+	<input type="button" id="submit" value="제출" onclick="submitCheck()" />
+</div>
+</form>
+</main>
+</body>
+<script type="text/javascript" src="../js/20210701demo01.js"></script>
+</html>

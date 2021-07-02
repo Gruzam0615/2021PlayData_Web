@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form name="drawinglist" action="#" method="POST">
+<fieldset>
+	<legend> 참가자 이름을 입력하세요.</legend>
+	<input type="text" id="insertName" value=""/>
+	<input type="button" id="button" value="등록" onclick="addPeople()" />
+</fieldset>
+<fieldset>
+	<legend>참가자 명단</legend>
+	<div id="peopleListDiv" class="">
+		<ul id="peopleList">
+			<li><label>u01</label><input type="checkbox"/></li>
+			<li><label>u02</label><input type="checkbox"/></li>
+			<li><label>u03</label><input type="checkbox"/></li>
+			<li><label>u04</label><input type="checkbox"/></li>
+		</ul>
+	</div>
+</fieldset>	
+</form>
+</body>
+<script type="text/javascript" src="../js/drawinglist.js"></script>
+</html>

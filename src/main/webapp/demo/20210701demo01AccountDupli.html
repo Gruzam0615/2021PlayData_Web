@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>아이디 중복검사</title>
+</head>
+<body>
+<main>
+<form>
+	<div>
+		<label for="account">ID</label>
+		<input type="text" id="account" value="" />
+	</div>
+	<div>
+		<input type="button" value="중복확인" onclick="duplCheck()"/>
+		<input type="button" value="확인한 아이디 사용하기" onclick="usingAccount()"/>
+		<input type="button" value="창닫기" onclick="window.close()"/>
+	</div>	
+</form>
+</main>
+</body>
+<script type="text/javascript">
+let account_list = [
+	"user01", "tester01", "gruzam0615"
+];
+
+window.onload = function() {
+	let parentMember = window.opener.document.querySelector("#account");		
+	
+	const $account = document.querySelector("#account");
+	$account.value = parentMember.value;
+	$account.focus();
+		
+}
+
+const duplCheck = () => {
+	const $temp = document.querySelector("#account");
+	let tempval = $temp.value;	
+	
+	if(account_list.includes(tempval)) {
+		alert(`${tempval}은 사용불가능한 ID입니다.`);
+	} else {
+		alert(`${tempval}은 사용가능한 ID입니다.`);
+	}
+}
+
+const usingAccount = () => {
+	const $temp = document.querySelector("#account");
+	let tempval = $temp.value;
+	
+	let parentMember = window.opener.document.querySelector("#account");
+	
+	parentMember.value = tempval;
+	parentMember.readOnly = "readOnly";
+	
+	window.close();
+}
+</script>
+</html>

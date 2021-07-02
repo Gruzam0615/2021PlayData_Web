@@ -1,0 +1,73 @@
+<!--  유동국님의 HTML, js 코드 2021.06.30 수업 중 -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>DOM API basic</title>
+</head>
+<body>
+	<button onclick="titleHidden()">제목 감추기</buttoon>
+	<button onclick="titleVisible()">제목 보이기</buttoon>
+	<button onclick="titleVisibleRandomColor()">제목 랜덤 색상변경 보이기</button>
+<h3 id="title_1">DOM API basic</h3>
+<form action="#" method="get" name="sampleForm" id="">
+	<div>아이디: <input type="text" name="memberId"></div>
+	<div>이름: <input type="text" name="name"></div>
+	<div>마일리지: <input type="text" name="mileage"></div>
+	<div><input type="submit" value="확인" onclick="alert(this.value)"></div>
+</form>
+</body>
+<script type="text/javascript">
+	/* 윈도우 로드 이벤트 처리 함수 */
+	window.onload = function(){
+		var takeElement = document.getElementById("title_1");
+		console.log(typeof(takeElement));
+		
+		// html 내용조회
+		var html = takeElement.innerHTML;
+		console.log("html>> ", html);
+		
+		// html 동적 변경
+		//여기의 style 지정 때문에 아래 <scirpt>영역에 function titleVisibleRandomColor()가 작동하지 않는다.
+		takeElement.innerHTML = "<h1 style='color:red;background-color:yellow;'>여러분파이팅!!!</h1>"
+		
+		
+		// 아이디 입력항목 객체 가져오기
+		var memberIdElement = document.sampleForm.memberId;
+		// 아이디 객체 포커스 위치시키기 : html5 속성 : autofucus="autofocus"
+		memberIdElement.focus();
+	
+	}
+	
+	function titleHidden() {
+		//alert('제목 감추기')
+		// 제목 엘리먼트 객체 가져오기
+		var takeTitleElement = document.getElementById("title_1");
+		takeTitleElement.style.visibility = "hidden";
+	}
+	
+	function titleVisible() {
+		//alert('제목 보이기')
+		var takeTitleElement = document.getElementById("title_1");
+		takeTitleElement.style.visibility = "visible";
+	}
+	
+	
+	function titleVisibleRandomColor() {
+		//alert('제목 랜덤 색상변경 보이기')
+		var colors = ["red","yellow","cyan","blue","magenta"];
+		var takeColorElement = document.getElementById("title_1");
+		
+		var randomNum = Math.round(Math.random() * colors.length);
+		var randomNum2 = Math.round(Math.random() * colors.length);
+		
+				
+		takeColorElement.style.background = colors[randomNum];
+		takeColorElement.style.color = colors[randomNum2];
+		
+	}
+	
+	
+</script>
+</html>
